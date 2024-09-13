@@ -10,7 +10,7 @@ export class ProductsRepository{
 
     constructor(){
         this.client = new DynamoDBClient({
-            region:"us-east-1",
+            region: process.env.AWS_REGION || 'us-east-1',
         })
     }
 
